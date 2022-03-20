@@ -5,7 +5,7 @@ import {
 
 export const getWaterHeight = () => async dispatch => {
     axios
-        .get("http://testing-z.herokuapp.com/api/sensors/device/water_height_sensor")
+        .get("https://testing-z.herokuapp.com/api/sensors/device/water_height_sensor")
         .then(res => {
             console.log("Success Height :", res.data);
             dispatch({

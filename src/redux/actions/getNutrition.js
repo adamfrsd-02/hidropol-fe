@@ -5,7 +5,7 @@ import {
 
 export const getNutrition = () => (dispatch) => {
     axios
-        .get("http://testing-z.herokuapp.com/api/sensors/device/nutrition_sensor")
+        .get("https://testing-z.herokuapp.com/api/sensors/device/nutrition_sensor")
         .then((res) => {
             console.log("Success Nutrition :", res.data);
             dispatch({

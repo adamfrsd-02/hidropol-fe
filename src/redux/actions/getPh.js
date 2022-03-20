@@ -5,7 +5,7 @@ import {
 
 export const getPH = () => (dispatch) => {
     axios
-        .get("http://testing-z.herokuapp.com/api/sensors/device/ph_sensor")
+        .get("https://testing-z.herokuapp.com/api/sensors/device/ph_sensor")
         .then((res) => {
             console.log("Success PH :", res.data);
             dispatch({

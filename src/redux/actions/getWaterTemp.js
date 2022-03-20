@@ -5,7 +5,7 @@ import {
 
 export const getWaterTemp = () => (dispatch) => {
     axios
-        .get("http://testing-z.herokuapp.com/api/sensors/device/water_temp_sensor")
+        .get("https://testing-z.herokuapp.com/api/sensors/device/water_temp_sensor")
         .then((res) => {
             console.log("Success Water Temp :", res.data);
             dispatch({
