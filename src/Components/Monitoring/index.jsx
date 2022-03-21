@@ -110,7 +110,7 @@ const Monitoring = () => {
                 <h1 class="h3">
                   {water_height.length > 0 ? (
                     water_height.map((water_height) => (
-                      <h1 class="h3">{water_height.data}</h1>
+                      <h1 class="h3">{water_height.data.replace("-", "")}</h1>
                     ))
                   ) : (
                     <h1 className="h3">Loading</h1>
