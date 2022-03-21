@@ -50,11 +50,10 @@ const Monitoring = () => {
                   height="0"
                 />
                 {temp.length > 0 ? (
-                  temp.map((temp) => <h1 class="h3">{temp.data}</h1>)
+                  temp.map((temp) => <div>Sunny Day{temp.data}&deg;C</div>)
                 ) : (
                   <h1 className="h3">Loading</h1>
                 )}
-                Sunny Day 27&deg;C
               </div>
             </div>
           </div>
