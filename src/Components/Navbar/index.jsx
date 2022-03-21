@@ -44,11 +44,11 @@ const Navbar = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">
+                <a class="nav-link" href="/about">
                   About
                 </a>
               </li>
-              <li class="nav-item">
+              {/* <li class="nav-item">
                 <a class="nav-link" href="tips.html">
                   Tips
                 </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 <a class="nav-link" href="calender.html">
                   Calendar
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

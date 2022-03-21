@@ -9,6 +9,7 @@ import { getPH } from "../../redux/actions/getPh";
 import { getNutrition } from "../../redux/actions/getNutrition";
 import { getWaterTemp } from "../../redux/actions/getWaterTemp";
 import { getWaterHeight } from "../../redux/actions/getWaterHeight";
+import { getTemp } from "../../redux/actions/getTemp";
 import { useSelector, useDispatch } from "react-redux";
 // import imgTemp from "../../Assets/images/air.png";
 
@@ -18,6 +19,7 @@ const Monitoring = () => {
   const nutrition = useSelector((state) => state.nutrition_sensor.data);
   const water_temp = useSelector((state) => state.water_temp_sensor.data);
   const water_height = useSelector((state) => state.water_height_sensor.data);
+  const temp = useSelector((state) => state.temp_sensor.data);
   console.log("ph", ph);
   React.useEffect(() => {
     setTimeout(() => {
@@ -25,6 +27,7 @@ const Monitoring = () => {
       dispatch(getNutrition());
       dispatch(getWaterTemp());
       dispatch(getWaterHeight());
+      dispatch(getTemp());
     }, 1000);
   }, [getPH]);
 
@@ -46,6 +49,11 @@ const Monitoring = () => {
                   width="60"
                   height="0"
                 />
+                {temp.length > 0 ? (
+                  temp.map((temp) => <h1 class="h3">{temp.data}</h1>)
+                ) : (
+                  <h1 className="h3">Loading</h1>
+                )}
                 Sunny Day 27&deg;C
               </div>
             </div>
